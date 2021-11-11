@@ -1,0 +1,7 @@
+<app-announcement
+  *ngFor="let item of announcements"
+  [announcement]="item"
+  [announcements]="announcements"
+  (updatedList)="updateList($event)"
+  (toUpdate)="toUpdate($event)"
+></app-announcement>

@@ -1,0 +1,7 @@
+<app-form (updatedList)="getList($event)" [toUpdate]="itemToUpdate"></app-form>
+<hr>
+<form [formGroup]="filter" (input)="onInput()">
+  <label>Filter: <input type="text" formControlName="filter"></label>
+</form>
+<hr>
+<app-announcements [announcements]="list" (lift)="toUpdate($event)"></app-announcements>

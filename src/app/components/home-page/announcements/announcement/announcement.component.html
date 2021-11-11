@@ -1,0 +1,11 @@
+<div class="list">
+  <h1>{{announcement.id}} -- {{announcement.title}} -- {{announcement.created_at|date:'medium'}}</h1>
+  <button (click)="del()">DEL</button>
+  <button (click)="edit()">EDIT</button>
+  <button (click)="detail()">DETAILS</button>
+  <div *ngIf="details" class="border">
+    <h2>{{announcement.description}}</h2>
+    <app-announcement *ngFor="let item of top3" [announcement]="item"></app-announcement>
+  </div>
+</div>
+

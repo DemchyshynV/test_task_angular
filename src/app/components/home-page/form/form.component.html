@@ -1,0 +1,5 @@
+<form [formGroup]="form">
+  <div><label>Title: <input type="text" formControlName="title"></label></div>
+  <div><label>Description: <input type="text" formControlName="description"></label></div>
+  <button (click)="save()">{{saveButton?'SAVE':'EDIT'}}</button>
+</form>
